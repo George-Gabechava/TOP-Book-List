@@ -1,0 +1,49 @@
+/* Table Styling */
+table, th, td {
+  border: solid 1px;
+  padding: 15px;
+  border-spacing: 10px;
+}
+
+table {
+    background-color: #fab95b;
+    border-collapse: collapse;
+
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+th {
+    font-size: x-large;
+}
+
+td {
+    font-size: large;
+}
+
+td:nth-child(3) {
+    text-align: right;
+}
+
+#buttonAdd {
+    background-color: #1a3263;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    margin: 20px;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
