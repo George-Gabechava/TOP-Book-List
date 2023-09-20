@@ -25,6 +25,16 @@ td:nth-child(3) {
     text-align: right;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Styling */
+
 #buttonAdd {
     background-color: #1a3263;
     border: none;
@@ -40,11 +50,26 @@ td:nth-child(3) {
 
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.btn_read, .btn_delete {
+    padding: 15px 32px;
+    font-weight: bolder;
+
 }
 
+.btn_delete {
+    color: white;
+    background-color: #f16821;
+}
+
+.btn_read {
+    background-color: #e8e2db;
+}
+
+.btn_read:hover {
+    background-color: white;
+}
+
+.btn_delete:hover {
+    background-color: lightcoral;
+}
