@@ -11,34 +11,33 @@
     
     <!-- A modal dialog containing a form -->
     <dialog id="favDialog">
-      <form>
+      <form id="myForm">
         <label for="fTitle">Title </label>
-        <input type="text" id="fTitle" name="fTitle">
+        <input type="text" id="fTitle" name="fTitle" required>
         <br>
         
         <label for="fauthor">Author</label>
-        <input type="text" id="fauthor" name="fauthor">
+        <input type="text" id="fauthor" name="fauthor" required>
         <br>
         
         <label for="fpages">Pages</label>
-        <input type="number" id="fpages" name="fpages" min="0"> 
+        <input type="number" id="fpages" name="fpages" min="0" required> 
         <br>
 
-        <p>
-          <fieldset>
-            <legend>Have you finished reading the book?</legend>
-            <div>
-              <input type="radio" id="choice1" name="status" onclick="myFunction(this.value)" value="No" />
-              <label for="choice1">No</label>
-              <input type="radio" id="choice3" name="status" onclick="myFunction(this.value)" value="Yes"/>
-              <label for="choice3">Yes</label>
-            </div>
-          </fieldset>
-          
-        </p>
-        <div>
-          <button value="cancel" formmethod="dialog">Cancel</button>
-          <button id="confirmBtn" value="default">Confirm</button>
+        <fieldset id="myField">
+          <legend>Have you finished reading the book?</legend>
+          <div>
+            <input type="radio" id="choice1" name="status" onclick="myFunction(this.value)" value="No" required/>
+            <label for="choice1">No</label>
+            <input type="radio" id="choice3" name="status" onclick="myFunction(this.value)" value="Yes"/>
+            <label for="choice3">Yes</label>
+          </div>
+        </fieldset>
+        <br>
+        
+        <div id="formButtons">
+          <button value="cancel" formmethod="dialog" formnovalidate >Cancel</button>
+          <button type="submit" id="confirmBtn" value="default">Confirm</button>
         </div>
       </form>
     </dialog>

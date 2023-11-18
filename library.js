@@ -170,17 +170,29 @@ function myFunction(statusButton) {
 
 const confirmBtn = favDialog.querySelector("#confirmBtn");
 const bookTitle = document.querySelector('#fTitle');
+const bookAuthor = document.querySelector('#fauthor');
+const bookPages = document.querySelector('#fpages');
+const bookRadio1 = document.querySelector('#choice1');
+const bookRadio2 = document.querySelector('#choice3');
+
+
+
 
 // "Show the dialog" button opens the <dialog> modally
 showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
+
 // Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
 confirmBtn.addEventListener("click", (event) => {
+  if (!bookTitle.checkValidity() || !bookAuthor.checkValidity() || !bookPages.checkValidity() || (!bookRadio1.checkValidity() || !bookRadio2.checkValidity())) {
+    return;
+  };
+
   event.preventDefault(); // We don't want to submit this fake form
-  favDialog.close();
   addBookToLibrary(document.getElementById("fTitle").value, document.getElementById("fauthor").value, document.getElementById("fpages").value, currentStatus);
+  favDialog.close();
   mytable.remove();
   mytable = createTableFromObjects(myLibrary);
   createTableFromObjects(myLibrary);

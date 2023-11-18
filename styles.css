@@ -33,6 +33,22 @@ td:nth-child(3) {
     align-items: center;
 }
 
+/* Form Styling */
+#myForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#myField {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#formButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* Button Styling */
 
 #buttonAdd {
